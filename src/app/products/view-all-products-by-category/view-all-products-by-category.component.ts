@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-view-all-products-by-category',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-all-products-by-category.component.css']
 })
 export class ViewAllProductsByCategoryComponent implements OnInit {
+    
+  searchCategory = '';
 
-  constructor() { }
+  constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.activatedRoute.queryParams.subscribe(data=>{
+      this.searchCategory = data.category;
+    });
   }
 
 }
