@@ -1,5 +1,6 @@
 <div class="list-group">
-  <a href="" class="list-group-item">Categoria 1</a>
-  <a href="" class="list-group-item">Categoria 2</a>
-  <a href="" class="list-group-item">Categoria 3</a>
+  <a href="" class="list-group-item" *ngFor="let categoryList">
+    {{ categoryList.categoryName }}
+  </a>
+  <a href="" class="list-group-item"> </a>
 </div>

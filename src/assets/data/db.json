@@ -1,30 +1,46 @@
 {
   "products": [
     { "id": 1,
-      "name": "Booster MTG",
-      "category_id": "2",
-      "description": "Booster de Magic The Gathering",
-      "prdouct_img": "img_path",
-      "price": 100,
-      "is_available": true,
+      "categoryId": "2",
+      "productName": "Camisa da Tommy",
+      "description": "Camisa Polo da Tommy",
       "rating": 4,
-      "reviews": 120,
-      "vendor_name": "Seller - 1",
-      "warranty": 2
+      "price": 150,
+      "prdouct_img": "img_path",
+      "is_available": true,
+      "color": "Blue",
+      "reviews": 120
     },
     { "id": 2,
-      "name": "Booster YUGIOH",
-      "category_id": "3",
-      "description": "Booster de YUGIOH",
+      "categoryId": "2",
+      "productName": "Camisa da LaLa",
+      "description": "Camisa Polo da Lacoste",
+      "rating": 4,
+      "price": 100,
       "prdouct_img": "img_path",
-      "price": 50,
       "is_available": true,
-      "rating": 3,
-      "reviews": 60,
-      "vendor_name": "Seller - 1",
-      "warranty": 1
+      "color": "Black",
+      "reviews": 10
+    },
+    { "id": 3,
+      "categoryId": "3",
+      "productName": "Camisa do Flamengo",
+      "description": "Camisa regata do Flamengo",
+      "rating": 4,
+      "price": 40,
+      "prdouct_img": "img_path",
+      "is_available": true,
+      "color": "Red",
+      "reviews": 10
     }
   ],
+
+  "categories": [
+    { "id": 1, "categoryName": "camisas de Time"},
+    { "id": 2, "categoryName": "camisas Polo"},
+    { "id": 3, "categoryName": "camisas Regata"}
+  ],
+
   "comments": [
     { "id": 1,
       "body": "some comment",

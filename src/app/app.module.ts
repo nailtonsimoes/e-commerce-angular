@@ -4,8 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { OrdersModule } from './orders/orders.module'
-import { SiteFrameworkModule } from './site-framework/site-framework.module'
+import { HttpClientModule } from '@angular/common/http';
+
+import { OrdersModule } from './orders/orders.module';
+import { SiteFrameworkModule } from './site-framework/site-framework.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import { SiteFrameworkModule } from './site-framework/site-framework.module'
     BrowserModule,
     AppRoutingModule,
     OrdersModule,
-    SiteFrameworkModule
+    HttpClientModule,
+    SiteFrameworkModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
