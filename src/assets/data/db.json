@@ -2,33 +2,33 @@
   "products": [
     { "id": 1,
       "categoryId": "2",
-      "productName": "Camisa da Tommy",
+      "name": "Camisa da Tommy",
       "description": "Camisa Polo da Tommy",
       "rating": 4,
       "price": 150,
-      "prdouct_img": "img_path",
+      "prdouct_img": "dummyimage.com/450x300/dee2e6/6c757d.jpg",
       "is_available": true,
       "color": "Blue",
       "reviews": 120
     },
     { "id": 2,
       "categoryId": "2",
-      "productName": "Camisa da LaLa",
+      "name": "Camisa da LaLa",
       "description": "Camisa Polo da Lacoste",
       "rating": 4,
       "price": 100,
-      "prdouct_img": "img_path",
+      "prdouct_img": "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
       "is_available": true,
       "color": "Black",
       "reviews": 10
     },
     { "id": 3,
       "categoryId": "3",
-      "productName": "Camisa do Flamengo",
+      "name": "Camisa do Flamengo",
       "description": "Camisa regata do Flamengo",
       "rating": 4,
       "price": 40,
-      "prdouct_img": "img_path",
+      "prdouct_img": "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
       "is_available": true,
       "color": "Red",
       "reviews": 10
@@ -36,9 +36,9 @@
   ],
 
   "categories": [
-    { "id": 1, "categoryName": "camisas de Time"},
-    { "id": 2, "categoryName": "camisas Polo"},
-    { "id": 3, "categoryName": "camisas Regata"}
+    { "id": 1, "name": "camisas de Time"},
+    { "id": 2, "name": "camisas Polo"},
+    { "id": 3, "name": "camisas Regata"}
   ],
 
   "comments": [

@@ -3,24 +3,29 @@ import { HttpClient } from '@angular/common/http';
 import { Product } from './product';
 import { Observable } from 'rxjs';
 import { Category } from '../site-framework/category';
+import { tap } from 'rxjs/internal/operators/tap';
+import { environment } from 'src/environments/environment'; 
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
 
+    api = environment.baseUrl;
+
   constructor(private httpClient: HttpClient) { }
   
-  getAllProducts(): Observable<Product>{
+  getAllProducts(): Observable<Product[]>{
     const productUrl = 'http://localhost:3000/products';
     
-    return this.httpClient.get<Product>(productUrl); //return an observable
+    return this.httpClient.get<Product[]>(productUrl); //return an observable
   }
 
-  getCategories(): Observable<Category> {
-    const categoriesUrl = 'http://localhost:3000/categories';
+  getCategories(): Observable<Category[]> {
 
-    return this.httpClient.get<Category>(categoriesUrl);
+    return this.httpClient.get<Category[]>('http://localhost:3000/categories'); //return an observable
+
   }
 
   createProduct (productBody: Product): Observable<Product>{

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
+import { tap } from 'rxjs/internal/operators/tap';
+import { catchError } from 'rxjs/internal/operators/catchError';
 import { ProductsService } from 'src/app/products/products.service';
 import { Category } from '../category';
 
@@ -9,17 +11,27 @@ import { Category } from '../category';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit {
-
-  categoryList!: Category;
+  //lista de objeto do tipo category que recebe o data do service e exibe no html
+  categoryList: Category[] = []; 
+  erro: any;
 
   constructor(private productsService: ProductsService) { 
-    this.productsService.getCategories().subscribe(data => {
-      this.categoryList = data;
-      console.log(this.categoryList)
-    });
+    
+    this.getter();
+    
   }
-
-  
+  //metodo que recebe o dado do service e inicializa no construtor.
+  getter() {
+    this.productsService.getCategories().
+    subscribe((data: Category[]) => {
+      this.categoryList = data;
+      console.log(data);
+    },
+    (error: any) => {
+      this.erro = error;
+      console.error(error);
+    })
+  }
 
   ngOnInit(): void {
     
