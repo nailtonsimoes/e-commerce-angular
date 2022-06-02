@@ -1,0 +1,8 @@
+a {
+  color: rgb(37, 37, 37);
+  text-decoration: none;
+}
+
+.fw-bolder a:hover {
+  color: rgb(60, 60, 149);
+}

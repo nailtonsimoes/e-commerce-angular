@@ -23,7 +23,8 @@ export class ViewAllProductsComponent implements OnInit {
     this.productsService.getAllProducts().
     subscribe((data: Product[]) => {
       this.productList = data;
-      console.log(data);
+      console.log('oq recebemos',data);
+      console.log('oq salvamos',this.productList);
     },
     (error: any) => {
       this.erro = error;

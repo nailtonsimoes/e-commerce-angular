@@ -25,7 +25,6 @@ export class SidebarComponent implements OnInit {
     this.productsService.getCategories().
     subscribe((data: Category[]) => {
       this.categoryList = data;
-      console.log(data);
     },
     (error: any) => {
       this.erro = error;

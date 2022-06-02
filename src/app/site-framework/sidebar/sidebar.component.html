@@ -1,5 +1,8 @@
-<div class="list-group">
-  <a href="" class="list-group-item ng" *ngFor="let cat of categoryList">
+<a href="products" class="list-group-item" style="background-color: #ffcc">
+  Todos os Produtos
+</a>
+<div class="list-group" *ngFor="let cat of categoryList">
+  <a href="products/category/{{ cat.id }}" class="list-group-item">
     {{ cat.name }}
   </a>
 </div>

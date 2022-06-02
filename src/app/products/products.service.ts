@@ -36,7 +36,7 @@ export class ProductsService {
   }
 
   viewProduct (productId: string): Observable<Product>{
-    const productUrl = 'http://localhost:3000/product/'+productId;
+    const productUrl = 'http://localhost:3000/products/'+productId;
     
    return this.httpClient.get<Product>(productUrl); //return an observable
 
@@ -56,10 +56,9 @@ export class ProductsService {
 
   }
 
-  searchCategoryProducts (categoryId: string): Observable<Product>{
-    const productUrl = 'http://localhost:3000/products/category='+categoryId;
-    
-   return this.httpClient.get<Product>(productUrl); //return an observable
+  searchCategoryProducts (categoryId:number): Observable<Product[]>{
+    const productUrl = 'http://localhost:3000/products?categoryId='+categoryId;
+   return this.httpClient.get<Product[]>(productUrl); //return an observable
 
   }
 

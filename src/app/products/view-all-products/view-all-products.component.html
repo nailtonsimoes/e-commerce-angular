@@ -17,16 +17,15 @@
           <div class="card-body p-4">
             <div class="text-center">
               <!-- Product name-->
-              <h5 class="fw-bolder">{{ product.name }}</h5>
+              <h5 class="fw-bolder">
+                <!-- Linka o nome do produto ao protudo -->
+                <a routerLink="product/{{ product.id }}"> {{ product.name }}</a>
+              </h5>
               <!-- Product reviews-->
               <div
                 class="d-flex justify-content-center small text-warning mb-2"
               >
-                <div class="bi-star-fill"></div>
-                <div class="bi-star-fill"></div>
-                <div class="bi-star-fill"></div>
-                <div class="bi-star-fill"></div>
-                <div class="bi-star-fill"></div>
+                <div class="bi-star-fill">{{ product.rating }} Estrelas</div>
               </div>
               <!-- Product price-->
               ${{ product.price }}
