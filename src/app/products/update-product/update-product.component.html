@@ -1,3 +1,105 @@
-<p>update-product works!</p>
+<form class="row g-3" [formGroup]="form">
+  <div class="col-md-4">
+    <label for="productName" class="form-label">Nome do produto</label>
+    <input
+      type="text"
+      class="form-control"
+      id="productName"
+      formControlName="name"
+    />
+  </div>
 
-<p>Product Id: {{ productId }}</p>
+  <div class="col-md-4">
+    <label for="productId" class="form-label">ID do produto</label>
+    <input
+      type="number"
+      class="form-control"
+      id="productId"
+      formControlName="id"
+    />
+  </div>
+
+  <div class="col-md-4">
+    <label for="productId" class="form-label">ID da categoria</label>
+    <input
+      type="string"
+      class="form-control"
+      id="productId"
+      formControlName="categoryId"
+    />
+  </div>
+
+  <div class="col-md-6">
+    <label for="productDescription" class="form-label"
+      >Descrição do produto</label
+    >
+    <input
+      type="text"
+      class="form-control"
+      id="productDescription"
+      formControlName="description"
+    />
+  </div>
+
+  <div class="col-md-6">
+    <label for="productRating" class="form-label">Avaliação</label>
+    <select
+      id="productRating"
+      class="form-select"
+      formControlName="rating"
+      type="number"
+    >
+      <option [value]="1">1</option>
+      <option [value]="2">2</option>
+      <option [value]="3">3</option>
+      <option [value]="4">4</option>
+      <option [value]="5">5</option>
+    </select>
+  </div>
+
+  <div class="col-md-6">
+    <label for="productColor" class="form-label">Cor do produto</label>
+    <input
+      type="text"
+      class="form-control"
+      id="productColor"
+      formControlName="color"
+    />
+  </div>
+
+  <div class="col-md-6">
+    <label for="productisAvailable" class="form-label">Está Disponivel?</label>
+    <select
+      id="productIsAvable"
+      class="form-select"
+      formControlName="isAvailable"
+    >
+      <option [value]="true" type="boolean">Sim</option>
+      <option [value]="false" type="boolean">Não</option>
+    </select>
+  </div>
+
+  <div class="col-md-6">
+    <label for="productPrice" class="form-label">Preço do produto</label>
+    <input
+      type="number"
+      class="form-control"
+      id="productPrice"
+      formControlName="price"
+    />
+  </div>
+
+  <div class="col-md-6">
+    <label for="productReviews" class="form-label">Avaliações</label>
+    <select id="productReviews" class="form-select" formControlName="reviews">
+      <option [value]="1">Sim</option>
+      <option [value]="0">Não</option>
+    </select>
+  </div>
+
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary" (click)="attProduct(form)">
+      Atualizar Produto
+    </button>
+  </div>
+</form>

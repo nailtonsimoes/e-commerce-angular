@@ -1,52 +1,106 @@
-<form class="row g-3">
-  <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">Email</label>
-    <input type="email" class="form-control" id="inputEmail4" />
-  </div>
-  <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">Password</label>
-    <input type="password" class="form-control" id="inputPassword4" />
-  </div>
-  <div class="col-12">
-    <label for="inputAddress" class="form-label">Address</label>
-    <input
-      type="text"
-      class="form-control"
-      id="inputAddress"
-      placeholder="1234 Main St"
-    />
-  </div>
-  <div class="col-12">
-    <label for="inputAddress2" class="form-label">Address 2</label>
-    <input
-      type="text"
-      class="form-control"
-      id="inputAddress2"
-      placeholder="Apartment, studio, or floor"
-    />
-  </div>
-  <div class="col-md-6">
-    <label for="inputCity" class="form-label">City</label>
-    <input type="text" class="form-control" id="inputCity" />
-  </div>
+<form class="row g-3" [formGroup]="form">
   <div class="col-md-4">
-    <label for="inputState" class="form-label">State</label>
-    <select id="inputState" class="form-select">
-      <option selected>Choose...</option>
-      <option>...</option>
+    <label for="productName" class="form-label">Nome do produto</label>
+    <input
+      type="text"
+      class="form-control"
+      id="productName"
+      formControlName="name"
+    />
+  </div>
+
+  <div class="col-md-4">
+    <label for="productId" class="form-label">ID do produto</label>
+    <input
+      type="number"
+      class="form-control"
+      id="productId"
+      formControlName="id"
+    />
+  </div>
+
+  <div class="col-md-4">
+    <label for="productId" class="form-label">ID da categoria</label>
+    <input
+      type="string"
+      class="form-control"
+      id="productId"
+      formControlName="categoryId"
+    />
+  </div>
+
+  <div class="col-md-6">
+    <label for="productDescription" class="form-label"
+      >Descrição do produto</label
+    >
+    <input
+      type="text"
+      class="form-control"
+      id="productDescription"
+      formControlName="description"
+    />
+  </div>
+
+  <div class="col-md-6">
+    <label for="productRating" class="form-label">Avaliação</label>
+    <select
+      id="productRating"
+      class="form-select"
+      formControlName="rating"
+      type="number"
+    >
+      <option [value]="1">1</option>
+      <!--Colocar o value dentro do colchetes para ele capturar o valor dentro e nao uma string-->
+      <option [value]="2">2</option>
+      <option [value]="3">3</option>
+      <option [value]="4">4</option>
+      <option [value]="5">5</option>
     </select>
   </div>
-  <div class="col-md-2">
-    <label for="inputZip" class="form-label">Zip</label>
-    <input type="text" class="form-control" id="inputZip" />
+
+  <div class="col-md-6">
+    <label for="productColor" class="form-label">Cor do produto</label>
+    <input
+      type="text"
+      class="form-control"
+      id="productColor"
+      formControlName="color"
+    />
   </div>
-  <div class="col-12">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck" />
-      <label class="form-check-label" for="gridCheck"> Check me out </label>
-    </div>
+
+  <div class="col-md-6">
+    <label for="productisAvailable" class="form-label">Está Disponivel?</label>
+    <select
+      id="productIsAvable"
+      class="form-select"
+      formControlName="isAvailable"
+    >
+      <option [value]="true">Sim</option>
+      <option [value]="false">Não</option>
+    </select>
   </div>
+
+  <div class="col-md-6">
+    <label for="productPrice" class="form-label">Preço do produto</label>
+    <input
+      type="number"
+      class="form-control"
+      id="productPrice"
+      formControlName="price"
+    />
+  </div>
+
+  <div class="col-md-6">
+    <label for="productReviews" class="form-label">Avaliações</label>
+    <select id="productReviews" class="form-select" formControlName="reviews">
+      <option [value]="1">Sim</option>
+      <option [value]="0">Não</option>
+    </select>
+  </div>
+
   <div class="col-12">
-    <button type="submit" class="btn btn-primary">Sign in</button>
+    <button type="submit" class="btn btn-primary" (click)="addNewProduct()">
+      Cadastrar Produto
+    </button>
   </div>
 </form>

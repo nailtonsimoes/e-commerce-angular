@@ -11,7 +11,7 @@ import { ProductsService } from '../products.service';
 })
 export class ViewAllProductsByCategoryComponent implements OnInit {
     
-  searchCategory: any;
+  searchCategory: string = '';
   productList: Product[] = [];
   erro: any;
 
@@ -22,8 +22,8 @@ export class ViewAllProductsByCategoryComponent implements OnInit {
     this.activatedRoute.params.subscribe(data=>{
       //pegamos o valor do parametro "id" e passamos para searchCategory como valor
       this.searchCategory = data.id;
-      console.log(data)
-      console.log(this.searchCategory)
+      console.log(data);
+      console.log('id da categoria',this.searchCategory);
 
       this.productSService.searchCategoryProducts(this.searchCategory).
           subscribe((categoryData: Product[]) => {

@@ -11,7 +11,7 @@ import { ProductsService } from '../products.service';
 export class ViewProductComponent implements OnInit {
 
   productId: any;
-  productDetails: any;
+  productDetails: Product = new Product;
   erro: any;
 
   constructor(private productsService: ProductsService ,private activatedRoute: ActivatedRoute) { 
@@ -25,12 +25,6 @@ export class ViewProductComponent implements OnInit {
     });
     
     this.getter();
-    // this.productsService.viewProduct(this.productId).
-    // subscribe(productData => {
-    //   this.productDetails = productData;
-    //   console.log(productData);
-    //   console.log(this.productDetails);
-    // });
   }
 
   getter() {

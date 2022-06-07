@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { OrdersModule } from './orders/orders.module';
 import { SiteFrameworkModule } from './site-framework/site-framework.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,8 @@ import { SiteFrameworkModule } from './site-framework/site-framework.module';
     OrdersModule,
     HttpClientModule,
     SiteFrameworkModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
