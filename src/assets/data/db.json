@@ -119,6 +119,18 @@
       "isAvailable": "true",
       "color": "cinza",
       "reviews": "1"
+    },
+    {
+      "id": 11,
+      "categoryId": "3",
+      "name": "camisa do Naruto",
+      "description": "é uma camisa de otaku",
+      "rating": "2",
+      "price": 200,
+      "productImg": "http://localhost:4200/assets/product-img.jpg",
+      "isAvailable": "true",
+      "color": "preto",
+      "reviews": "0"
     }
   ],
   "categories": [

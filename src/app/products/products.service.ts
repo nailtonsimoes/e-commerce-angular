@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { Product } from './product';
 import { Observable } from 'rxjs';
 import { Category } from '../site-framework/category';
-import { tap } from 'rxjs/internal/operators/tap';
 import { environment } from 'src/environments/environment'; 
 
 
@@ -68,7 +67,5 @@ export class ProductsService {
    return this.httpClient.get<Product>(productUrl); //return an observable
 
   }
-
-  
   
 }
